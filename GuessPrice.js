@@ -5,7 +5,7 @@ let guessprice = () =>
     let price = prompt("Entrez un chiffre entre 20 et 80");
     console.log(price)
 
-    if(price >= 20 && price <= 80)i++;
+    if(price >= 20 && price <= 80, i++);
     {
         if(toGuess < price) 
         {
