@@ -1,4 +1,4 @@
-let toGuess = Math.floor(Math.random() * 80) + 20;
+let toGuess = Math.floor(Math.random() * 60) + 20;
 let i=0;
 let guessprice = () => 
 {
