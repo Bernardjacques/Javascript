@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="CodeClicker.css" rel="stylesheet">
+    <title>BeCodeur Idle</title>
+</head>
+<body onkeypress="key_pressing()">
+    <section class="container">
+        <h1>BeCodeur Idle</h1>
+        <div class="affiche">
+                <p>Caractères: <a id="clicks"></a></p>
+        </div>
+        <div class="grid-container">
+            
+            <div class="multiplicateur">
+                 
+                <!-- auto-typer -->
+                <ul class="liststyle">
+                    <li><button class="mult" type="button" onClick="auto_click2()">Auto-Typing - <span id="auto_price"></span> char</button></li>
+                    <!-- multiplicateur -->
+                    <ul class="liststyle">
+                        <li><button class="boost" type="button" onClick="buy_multi()">Multiplicateur x<a id="multipli">1</a> - Price : <a id="multi_price"></a></button></li>
+                    </ul>
+                </ul>
+                <!-- becodien -->
+                <ul class="liststyle">
+                    <li><button class="mult" type="button" onClick="auto_becodien()"><span id="becodien"></span> - BeCodien - <span id="auto_becodien_price"></span> char</button>
+                        <!-- multiplicateur -->
+                        <ul class="liststyle">
+                            <li><button class="mult" type="button" onClick="buy_multi_becodien1()">Monitor Ranbert x<a id="multipli_becodien1">1</a> - Price : <a id="multi_becodien1_price"></a></button></li>
+                            <li><button class="mult" type="button" onClick="buy_multi_becodien2()">Monitor Dolu x<a id="multipli_becodien2">1</a> - Price : <a id="multi_becodien2_price"></a></button></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- junior webdev -->
+                <ul class="liststyle">
+                    <li><button class="mult" type="button" onClick="auto_junior()"><span id="junior"></span> - Junior WebDev - <span id="auto_junior_price"></span> char</button>
+                        <!-- multiplicateur -->
+                        <ul class="liststyle">
+                            <li><button class="mult" type="button" onClick="buy_multi_junior1()">Hopeless Dream x<a id="multipli_junior1">1</a> - Price : <a id="multi_junior1_price"></a></button></li>
+                            <li><button class="mult" type="button" onClick="buy_multi_junior2()">Harassing Boss x<a id="multipli_junior2">1</a> - Price : <a id="multi_junior2_price"></a></button></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- chinese boi -->
+                <ul class="liststyle">
+                    <li><button class="mult" type="button" onClick="auto_chinese()"><span id="chinese"></span> - Chinese Boi - <span id="auto_chinese_price"></span> char</button>
+                        <!-- multiplicateur -->
+                        <ul class="liststyle">
+                            <li><button class="mult" type="button" onClick="buy_multi_chinese1()">Bowl of Rice x<a id="multipli_chinese1">1</a> - Price : <a id="multi_chinese1_price"></a></button></li>
+                            <li><button class="mult" type="button" onClick="buy_multi_chinese2()">Harassing Father x<a id="multipli_chinese2">1</a> - Price : <a id="multi_chinese2_price"></a></button></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- fullstack dev -->
+                <ul class="liststyle">
+                    <li><button class="mult" type="button" onClick="auto_fullstack()"><span id="fullstack"></span> - FullStack Dev - <span id="auto_fullstack_price"></span> char</button>
+                        <!-- multiplicateur -->
+                        <ul class="liststyle">
+                            <li><button class="mult" type="button" onClick="buy_multi_fullstack1()">Mob Programming x<a id="multipli_fullstack1">1</a> - Price : <a id="multi_fullstack1_price"></a></button></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- russian hacker -->
+                <ul class="liststyle">
+                    <li><button class="mult" type="button" onClick="auto_hacker()"><span id="hacker"></span> - Russian Hacker - <span id="auto_hacker_price"></span> char</button>
+                        <!-- multiplicateur -->
+                        <ul class="liststyle">
+                            <li><button class="mult" type="button" onClick="buy_multi_hacker1()">Cryptocurrency Transfert x<a id="multipli_hacker1">1</a> - Price : <a id="multi_hacker1_price"></a></button></li>
+                            <li><button class="mult" type="button" onClick="buy_multi_hacker2()">OUR Money x<a id="multipli_hacker2">1</a> - Price : <a id="multi_hacker2_price"></a></button></li>
+                            <li><button class="mult" type="button" onClick="buy_multi_hacker3()">KGB Threat x<a id="multipli_hacker3">1</a> - Price : <a id="multi_hacker3_price"></a></button></li>
+                            <ul class="liststyle">
+                                <li><button class="mult" type="button" onClick="buy_multi_hacker4()">Putin x<a id="multipli_hacker4">1</a> - Price : <a id="multi_hacker4_price"></a></button></li>
+                            </ul>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- nasa guy -->
+                <ul class="liststyle">
+                    <li><button class="mult" type="button" onClick="auto_nasa()"><span id="nasa"></span> - Nasa Guy - <span id="auto_nasa_price"></span> char</button>
+                        <!-- multiplicateur -->
+                        <ul class="liststyle">
+                            <li><button class="mult" type="button" onClick="buy_multi_nasa1()">Subvention x<a id="multipli_nasa1">1</a> - Price : <a id="multi_nasa1_price"></a></button></li>
+                            <li><button class="mult" type="button" onClick="buy_multi_nasa2()">Elon Musk x<a id="multipli_nasa2">1</a> - Price : <a id="multi_nasa2_price"></a></button></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- ia -->
+                <ul class="liststyle">
+                    <li><button class="mult" type="button" onClick="auto_ia()"><span id="ia"></span> - AI - <span id="auto_ia_price"></span> char</button>
+                        <!-- multiplicateur -->
+                        <ul class="liststyle">
+                            <li><button class="mult" type="button" onClick="buy_multi_ia1()">Neural Connexion x<a id="multipli_ia1">1</a> - Price : <a id="multi_ia1_price"></a></button></li>
+                            <li><button class="mult" type="button" onClick="buy_multi_ia2()">Illuminati's Supoort x<a id="multipli_ia2">1</a> - Price : <a id="multi_ia2_price"></a></button></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="keyboard">
+                <div class="letter_ligne1">
+                    <button class="letter" onClick="taper()">A</button>
+                    <button class="letter" onClick="taper()">Z</button>
+                    <button class="letter" onClick="taper()">E</button>
+                    <button class="letter" onClick="taper()">R</button>
+                    <button class="letter" onClick="taper()">T</button>
+                    <button class="letter" onClick="taper()">Y</button>
+                    <button class="letter" onClick="taper()">U</button>
+                    <button class="letter" onClick="taper()">I</button>
+                    <button class="letter" onClick="taper()">O</button>
+                    <button class="letter" onClick="taper()">P</button>
+                    <button class="letter" onClick="taper()">^</button>
+                    <button class="letter" onClick="taper()">$</button>
+                </div>
+                <div class="letter_ligne2">
+                    <button class="letter" onClick="taper()">Q</button>
+                    <button class="letter" onClick="taper()">S</button>
+                    <button class="letter" onClick="taper()">D</button>
+                    <button class="letter" onClick="taper()">F</button>
+                    <button class="letter" onClick="taper()">G</button>
+                    <button class="letter" onClick="taper()">H</button>
+                    <button class="letter" onClick="taper()">J</button>
+                    <button class="letter" onClick="taper()">K</button>
+                    <button class="letter" onClick="taper()">L</button>
+                    <button class="letter" onClick="taper()">M</button>
+                    <button class="letter" onClick="taper()">%</button>
+                    <button class="letter" onClick="taper()">µ</button>
+                </div>
+                <div class="letter_ligne3">
+                    <button class="letter" onClick="taper()">W</button>
+                    <button class="letter" onClick="taper()">X</button>
+                    <button class="letter" onClick="taper()">C</button>
+                    <button class="letter" onClick="taper()">V</button>
+                    <button class="letter" onClick="taper()">B</button>
+                    <button class="letter" onClick="taper()">N</button>
+                    <button class="letter" onClick="taper()">?</button>
+                    <button class="letter" onClick="taper()">.</button>
+                    <button class="letter" onClick="taper()">/</button>
+                    <button class="letter" onClick="taper()">=</button>
+                    <button class="letter" id="shift" onClick="taper()">SHIFT</button>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <section>
+        <div>
+
+        </div>
+        <div>
+            
+        </div>
+    </section>
+</body>
+</html>
+<script>
+    let becodien = 0;
+    let junior = 0;
+    let chinese = 0;
+    let fullstack = 0 ;
+    let hacker = 0;
+    let nasa = 0;
+    let ia = 0;
+
+    let becodien_click = 0;
+    let junior_click = 0;
+    let chinese_click = 0;
+    let fullstack_click = 0;
+    let hacker_click = 0;
+    let nasa_click = 0;
+    let ia_click = 0;
+
+    let multi = 1;
+    let multi_becodien1 = 1;
+    let multi_becodien2 = 1;
+    let multi_junior1 = 1;
+    let multi_junior2 = 1;
+    let multi_chinese1 = 1;
+    let multi_chinese2 = 1;
+    let multi_fullstack1 = 1;
+    let multi_hacker1 = 1;
+    let multi_hacker2 = 1;
+    let multi_hacker3 = 1;
+    let multi_hacker4 = 1;
+    let multi_nasa1 = 1;
+    let multi_nasa2 = 1;
+    let multi_ia1 = 1;
+    let multi_ia2 = 1;
+
+    let multi_price = 15;
+    let multi_becodien1_price = 20;
+    let multi_becodien2_price = 50;
+    let multi_junior1_price = 200;
+    let multi_junior2_price = 1000;
+    let multi_chinese1_price = 3000;
+    let multi_chinese2_price = 5000;
+    let multi_fullstack1_price = 10000;
+    let multi_hacker1_price = 30000;
+    let multi_hacker2_price = 50000;
+    let multi_hacker3_price = 100000;
+    let multi_hacker4_price = 250000;
+    let multi_nasa1_price = 750000;
+    let multi_nasa2_price = 1000000;
+    let multi_ia1_price = 5000000;
+    let multi_ia2_price = 10000000;
+
+    let auto_click_price = 20;
+    let auto_becodien_price = 50;
+    let auto_junior_price = 250;
+    let auto_chinese_price = 1250;
+    let auto_fullstack_price = 6250;
+    let auto_hacker_price = 31250;
+    let auto_nasa_price = 156250;
+    let auto_ia_price = 781250;
+
+    let auto = 0;
+    
+    let score = 0;
+
+    document.getElementById("clicks").innerHTML = score;
+
+    document.getElementById("multi_price").innerHTML = multi_price;
+    document.getElementById("multi_becodien1_price").innerHTML = multi_becodien1_price;
+    document.getElementById("multi_becodien2_price").innerHTML = multi_becodien2_price;
+    document.getElementById("multi_junior1_price").innerHTML = multi_junior1_price;
+    document.getElementById("multi_junior2_price").innerHTML = multi_junior2_price;
+    document.getElementById("multi_chinese1_price").innerHTML = multi_chinese1_price;
+    document.getElementById("multi_chinese2_price").innerHTML = multi_chinese2_price;
+    document.getElementById("multi_fullstack1_price").innerHTML = multi_fullstack1_price;
+    document.getElementById("multi_hacker1_price").innerHTML = multi_hacker1_price;
+    document.getElementById("multi_hacker2_price").innerHTML = multi_hacker2_price;
+    document.getElementById("multi_hacker3_price").innerHTML = multi_hacker3_price;
+    document.getElementById("multi_hacker4_price").innerHTML = multi_hacker4_price;
+    document.getElementById("multi_nasa1_price").innerHTML = multi_nasa1_price;
+    document.getElementById("multi_nasa2_price").innerHTML = multi_nasa2_price;
+    document.getElementById("multi_ia1_price").innerHTML = multi_ia1_price;
+    document.getElementById("multi_ia2_price").innerHTML = multi_ia2_price;
+
+    document.getElementById("auto_price").innerHTML = auto_click_price;
+    document.getElementById("auto_becodien_price").innerHTML = auto_becodien_price;
+    document.getElementById("auto_junior_price").innerHTML = auto_junior_price;
+    document.getElementById("auto_chinese_price").innerHTML = auto_chinese_price;
+    document.getElementById("auto_fullstack_price").innerHTML = auto_fullstack_price;
+    document.getElementById("auto_hacker_price").innerHTML = auto_hacker_price;
+    document.getElementById("auto_nasa_price").innerHTML = auto_nasa_price;
+    document.getElementById("auto_ia_price").innerHTML = auto_ia_price;
+
+    document.getElementById("becodien").innerHTML = becodien;
+    document.getElementById("junior").innerHTML = junior;
+    document.getElementById("chinese").innerHTML = chinese;
+    document.getElementById("fullstack").innerHTML = fullstack;
+    document.getElementById("hacker").innerHTML = hacker;
+    document.getElementById("nasa").innerHTML = nasa;
+    document.getElementById("ia").innerHTML = ia;
+
+    function taper() 
+    {
+        score += (1 * multi);
+        document.getElementById("clicks").innerHTML = score;
+    }
+
+    function buy_multi(){
+        if(multi_price <= score)
+        {
+            augmenterMultiplicateur()
+            score -= multi_price;
+            multi_price *= 2;
+            document.getElementById("multi_price").innerHTML = multi_price;
+            document.getElementById("clicks").innerHTML = score;
+        }
+        else
+        {
+            alert("Vous êtes pauvre");
+        }
+    }
+
+    function augmenterMultiplicateur()
+        {
+            multi += 1;
+            document.getElementById("multipli").innerHTML = multi;
+        }
+
+    function auto_click2()
+    {
+        if(auto == 0)
+        {
+            if(score >= 20)
+            {
+                score -= auto_click_price;
+                auto += 1;
+                document.getElementById("clicks").innerHTML = score;
+
+                
+                setInterval(function auto_click()
+                {
+                    taper()
+                },
+                1000);                                                                // Auto_click Speed
+            }
+            else
+            {
+                alert("Vous êtes pauvre")
+            }
+        }
+        else
+        {
+            
+        }
+    }
+
+//====================== Auto-Clicker ===============
+
+
+//================ BeCodien =========================
+
+    function taper_becodien()
+    {
+        score += (2 * becodien * multi_becodien1);
+        document.getElementById("clicks").innerHTML = score;
+    }
+
+    function auto_becodien()
+        {
+            if(score >= auto_becodien_price)
+                {
+                    score -= auto_becodien_price;
+                    becodien += 1;
+                    auto_becodien_price *= 2;
+                    document.getElementById("clicks").innerHTML = score;
+                    document.getElementById("auto_becodien_price").innerHTML = auto_becodien_price
+                    document.getElementById("becodien").innerHTML = becodien;
+                    
+                    setInterval(function auto_click_becodien()
+                    {
+                        taper_becodien()
+                    },
+                    1000);                                                                // Auto_click Speed
+                    
+                }
+                else
+                {
+                    alert("Vous êtes pauvre")
+                }
+        }
+
+//====== Monitor Ranbert ======
+
+function buy_multi_becodien1(){
+        if(multi_becodien1_price <= score)
+        {
+            augmenterMultiplicateur_becodien1()
+            score -= multi_becodien1_price;
+            multi_becodien1_price *= 2;
+            document.getElementById("multipli_becodien1").innerHTML = multi_becodien1;
+            document.getElementById("multi_becodien1_price").innerHTML = multi_becodien1_price;
+            document.getElementById("clicks").innerHTML = score;
+        }
+        else
+        {
+            alert("Vous êtes pauvre");
+        }
+    }
+
+    function augmenterMultiplicateur_becodien1()
+        {
+            multi_becodien1 += 1;
+            document.getElementById("multipli_becodien1").innerHTML = multi;
+        }
+
+
+//===== Monitor Dolu =====
+
+function buy_multi_becodien2(){
+        if(multi_becodien2_price <= score)
+        {
+            augmenterMultiplicateur_becodien2()
+            score -= multi_becodien2_price;
+            multi_becodien2_price *= 2;
+            document.getElementById("multipli_becodien2").innerHTML = multi_becodien2;
+            document.getElementById("multi_becodien2_price").innerHTML = multi_becodien2_price;
+            document.getElementById("clicks").innerHTML = score;
+        }
+        else
+        {
+            alert("Vous êtes pauvre");
+        }
+    }
+
+    function augmenterMultiplicateur_becodien2()
+        {
+            multi_becodien2 += 1;
+            document.getElementById("multipli_becodien2").innerHTML = multi;
+        }
+
+
+//================ Junior WebDev ======================
+
+    function taper_junior()
+    {
+        score += (5 * junior);
+        document.getElementById("clicks").innerHTML = score;
+    }
+
+    function auto_junior()
+        {
+            if(score >= auto_junior_price)
+                {
+                    score -= auto_junior_price;
+                    junior += 1;
+                    auto_junior_price *= 2;
+                    document.getElementById("clicks").innerHTML = score;
+                    document.getElementById("auto_junior_price").innerHTML = auto_junior_price
+                    document.getElementById("junior").innerHTML = junior;
+                    
+                    setInterval(function auto_click_junior()
+                    {
+                        taper_junior()
+                    },
+                    1000);                                                                // Auto_click Speed
+                    
+                }
+                else
+                {
+                    alert("Vous êtes pauvre")
+                }
+        }
+
+//===== Hopeless Dream =====
+
+function buy_multi_junior1(){
+        if(multi_junior1_price <= score)
+        {
+            augmenterMultiplicateur_junior1()
+            score -= multi_junior1_price;
+            multi_junior1_price *= 2;
+            document.getElementById("multipli_junior1").innerHTML = multi_junior1;
+            document.getElementById("multi_junior1_price").innerHTML = multi_junior1_price;
+            document.getElementById("clicks").innerHTML = score;
+        }
+        else
+        {
+            alert("Vous êtes pauvre");
+        }
+    }
+
+    function augmenterMultiplicateur_junior1()
+        {
+            multi_junior1 += 1;
+            document.getElementById("multipli_junior1").innerHTML = multi;
+        }
+
+//===== Harassing Boss ======
+
+function buy_multi_junior2(){
+        if(multi_junior2_price <= score)
+        {
+            augmenterMultiplicateur_junior2()
+            score -= multi_junior2_price;
+            multi_junior2_price *= 2;
+            document.getElementById("multipli_junior2").innerHTML = multi_junior2;
+            document.getElementById("multi_junior2_price").innerHTML = multi_junior2_price;
+            document.getElementById("clicks").innerHTML = score;
+        }
+        else
+        {
+            alert("Vous êtes pauvre");
+        }
+    }
+
+    function augmenterMultiplicateur_junior2()
+        {
+            multi_junior2 += 1;
+            document.getElementById("multipli_junior2").innerHTML = multi;
+        }
+
+//================ Chinese Boi ======================
+
+    function taper_chinese()
+    {
+        score += (10 * chinese);
+        document.getElementById("clicks").innerHTML = score;
+    }
+
+    function auto_chinese()
+        {
+            if(score >= auto_chinese_price)
+                {
+                    score -= auto_chinese_price;
+                    chinese += 1;
+                    auto_chinese_price *= 2;
+                    document.getElementById("clicks").innerHTML = score;
+                    document.getElementById("auto_chinese_price").innerHTML = auto_chinese_price
+                    document.getElementById("chinese").innerHTML = chinese;
+                    
+                    setInterval(function auto_click_chinese()
+                    {
+                        taper_chinese()
+                    },
+                    1000);                                                                // Auto_click Speed
+                    
+                }
+                else
+                {
+                    alert("Vous êtes pauvre")
+                }
+        }
+
+//===== Bowl Of Rice ======
+
+function buy_multi_chinese1(){
+        if(multi_chinese1_price <= score)
+        {
+            augmenterMultiplicateur_chinese1()
+            score -= multi_chinese1_price;
+            multi_chinese1_price *= 2;
+            document.getElementById("multipli_chinese1").innerHTML = multi_chinese1;
+            document.getElementById("multi_chinese1_price").innerHTML = multi_chinese1_price;
+            document.getElementById("clicks").innerHTML = score;
+        }
+        else
+        {
+            alert("Vous êtes pauvre");
+        }
+    }
+
+    function augmenterMultiplicateur_chinese1()
+        {
+            multi_chinese1 += 1;
+            document.getElementById("multipli_chinese1").innerHTML = multi;
+        }
+
+//===== Authoritarian Father ======
+
+function buy_multi_chinese2(){
+        if(multi_chinese2_price <= score)
+        {
+            augmenterMultiplicateur_chinese2()
+            score -= multi_chinese2_price;
+            multi_chinese2_price *= 2;
+            document.getElementById("multipli_chinese2").innerHTML = multi_chinese2;
+            document.getElementById("multi_chinese2_price").innerHTML = multi_chinese2_price;
+            document.getElementById("clicks").innerHTML = score;
+        }
+        else
+        {
+            alert("Vous êtes pauvre");
+        }
+    }
+
+    function augmenterMultiplicateur_chinese2()
+        {
+            multi_chinese2 += 1;
+            document.getElementById("multipli_chinese2").innerHTML = multi;
+        }
+
+//================ FullStack Dev ====================
+
+    function taper_fullstack()
+    {
+        score += (25 * fullstack);
+        document.getElementById("clicks").innerHTML = score;
+    }
+
+    function auto_fullstack()
+        {
+            if(score >= auto_fullstack_price)
+                {
+                    score -= auto_fullstack_price;
+                    fullstack += 1;
+                    auto_fullstack_price *= 2;
+                    document.getElementById("clicks").innerHTML = score;
+                    document.getElementById("auto_fullstack_price").innerHTML = auto_fullstack_price
+                    document.getElementById("fullstack").innerHTML = fullstack;
+                    
+                    setInterval(function auto_click_fullstack()
+                    {
+                        taper_fullstack()
+                    },
+                    1000);                                                                // Auto_click Speed
+                    
+                }
+                else
+                {
+                    alert("Vous êtes pauvre")
+                }
+        }
+
+//===== Mob Programming =====
+
+function buy_multi_fullstack1(){
+        if(multi_fullstack1_price <= score)
+        {
+            augmenterMultiplicateur_fullstack1()
+            score -= multi_fullstack1_price;
+            multi_fullstack1_price *= 2;
+            document.getElementById("multipli_fullstack1").innerHTML = multi_fullstack1;
+            document.getElementById("multi_fullstack1_price").innerHTML = multi_fullstack1_price;
+            document.getElementById("clicks").innerHTML = score;
+        }
+        else
+        {
+            alert("Vous êtes pauvre");
+        }
+    }
+
+    function augmenterMultiplicateur_fullstack1()
+        {
+            multi_fullstack1 += 1;
+            document.getElementById("multipli_fullstack1").innerHTML = multi;
+        }
+
+//================ Russian Hacker ===================
+
+    function taper_hacker()
+    {
+        score += (50 * hacker);
+        document.getElementById("clicks").innerHTML = score;
+    }
+
+    function auto_hacker()
+        {
+            if(score >= auto_hacker_price)
+                {
+                    score -= auto_hacker_price;
+                    hacker += 1;
+                    auto_hacker_price *= 2;
+                    document.getElementById("clicks").innerHTML = score;
+                    document.getElementById("auto_hacker_price").innerHTML = auto_hacker_price
+                    document.getElementById("hacker").innerHTML = hacker;
+                    
+                    setInterval(function auto_click_hacker()
+                    {
+                        taper_hacker()
+                    },
+                    1000);                                                                // Auto_click Speed
+                    
+                }
+                else
+                {
+                    alert("Vous êtes pauvre")
+                }
+        }
+
+//===== Cryptocurrency Transfert =====
+
+function buy_multi_hacker1(){
+        if(multi_hacker1_price <= score)
+        {
+            augmenterMultiplicateur_hacker1()
+            score -= multi_hacker1_price;
+            multi_hacker1_price *= 2;
+            document.getElementById("multipli_hacker1").innerHTML = multi_hacker1;
+            document.getElementById("multi_hacker1_price").innerHTML = multi_hacker1_price;
+            document.getElementById("clicks").innerHTML = score;
+        }
+        else
+        {
+            alert("Vous êtes pauvre");
+        }
+    }
+
+    function augmenterMultiplicateur_hacker1()
+        {
+            multi_hacker1 += 1;
+            document.getElementById("multipli_hacker1").innerHTML = multi;
+        }
+
+//===== OUR Money =====
+
+function buy_multi_hacker2(){
+        if(multi_hacker2_price <= score)
+        {
+            augmenterMultiplicateur_hacker2()
+            score -= multi_hacker2_price;
+            multi_hacker2_price *= 2;
+            document.getElementById("multipli_hacker2").innerHTML = multi_hacker2;
+            document.getElementById("multi_hacker2_price").innerHTML = multi_hacker2_price;
+            document.getElementById("clicks").innerHTML = score;
+        }
+        else
+        {
+            alert("Vous êtes pauvre");
+        }
+    }
+
+    function augmenterMultiplicateur_hacker2()
+        {
+            multi_hacker2 += 1;
+            document.getElementById("multipli_hacker2").innerHTML = multi;
+        }
+
+//===== KGB Threat ======
+
+function buy_multi_hacker3(){
+        if(multi_hacker3_price <= score)
+        {
+            augmenterMultiplicateur_hacker3()
+            score -= multi_hacker3_price;
+            multi_hacker3_price *= 2;
+            document.getElementById("multipli_hacker3").innerHTML = multi_hacker3;
+            document.getElementById("multi_hacker1_price").innerHTML = multi_hacker3_price;
+            document.getElementById("clicks").innerHTML = score;
+        }
+        else
+        {
+            alert("Vous êtes pauvre");
+        }
+    }
+
+    function augmenterMultiplicateur_hacker3()
+        {
+            multi_hacker3 += 1;
+            document.getElementById("multipli_hacker3").innerHTML = multi;
+        }
+
+
+//===== Putin =====
+
+function buy_multi_hacker4(){
+        if(multi_hacker4_price <= score)
+        {
+            augmenterMultiplicateur_hacker4()
+            score -= multi_hacker4_price;
+            multi_hacker4_price *= 2;
+            document.getElementById("multipli_hacker4").innerHTML = multi_hacker4;
+            document.getElementById("multi_hacker4_price").innerHTML = multi_hacker4_price;
+            document.getElementById("clicks").innerHTML = score;
+        }
+        else
+        {
+            alert("Vous êtes pauvre");
+        }
+    }
+
+    function augmenterMultiplicateur_hacker4()
+        {
+            multi_hacker4 += 1;
+            document.getElementById("multipli_hacker4").innerHTML = multi;
+        }
+
+
+//================ Nasa Guy =======================
+
+    function taper_nasa()
+    {
+        score += (100 * nasa);
+        document.getElementById("clicks").innerHTML = score;
+    }
+
+    function auto_nasa()
+        {
+            if(score >= auto_nasa_price)
+                {
+                    score -= auto_nasa_price;
+                    nasa += 1;
+                    auto_nasa_price *= 2;
+                    document.getElementById("clicks").innerHTML = score;
+                    document.getElementById("auto_nasa_price").innerHTML = auto_nasa_price
+                    document.getElementById("nasa").innerHTML = nasa;
+                    
+                    setInterval(function auto_click_nasa()
+                    {
+                        taper_nasa()
+                    },
+                    1000);                                                                // Auto_click Speed
+                    
+                }
+                else
+                {
+                    alert("Vous êtes pauvre")
+                }
+        }
+
+//===== Subvention =====
+
+function buy_multi_nasa1(){
+        if(multi_nasa1_price <= score)
+        {
+            augmenterMultiplicateur_nasa1()
+            score -= multi_nasa1_price;
+            multi_nasa1_price *= 2;
+            document.getElementById("multipli_nasa1").innerHTML = multi_nasa1;
+            document.getElementById("multi_nasa1_price").innerHTML = multi_nasa1_price;
+            document.getElementById("clicks").innerHTML = score;
+        }
+        else
+        {
+            alert("Vous êtes pauvre");
+        }
+    }
+
+    function augmenterMultiplicateur_nasa1()
+        {
+            multi_nasa1 += 1;
+            document.getElementById("multipli_nasa1").innerHTML = multi;
+        }
+
+//===== Elon Musk =====
+
+function buy_multi_nasa2(){
+        if(multi_nasa2_price <= score)
+        {
+            augmenterMultiplicateur_nasa2()
+            score -= multi_nasa2_price;
+            multi_nasa2_price *= 2;
+            document.getElementById("multipli_nasa2").innerHTML = multi_nasa2;
+            document.getElementById("multi_nasa2_price").innerHTML = multi_nasa2_price;
+            document.getElementById("clicks").innerHTML = score;
+        }
+        else
+        {
+            alert("Vous êtes pauvre");
+        }
+    }
+
+    function augmenterMultiplicateur_nasa2()
+        {
+            multi_nasa2 += 1;
+            document.getElementById("multipli_nasa2").innerHTML = multi;
+        }
+
+//================ IA ============================
+
+    function taper_ia()
+    {
+        score += (200 * ia);
+        document.getElementById("clicks").innerHTML = score;
+    }
+
+    function auto_ia()
+        {
+            if(score >= auto_ia_price)
+                {
+                    score -= auto_ia_price;
+                    ia += 1;
+                    auto_ia_price *= 2;
+                    document.getElementById("clicks").innerHTML = score;
+                    document.getElementById("auto_ia_price").innerHTML = auto_ia_price
+                    document.getElementById("ia").innerHTML = ia;
+                    
+                    setInterval(function auto_click_ia()
+                    {
+                        taper_ia()
+                    },
+                    1000);                                                                // Auto_click Speed
+                    
+                }
+                else
+                {
+                    alert("Vous êtes pauvre")
+                }
+        }
+        
+
+//===== Neural Connexion =====
+
+    function buy_multi_ia1(){
+        if(multi_ia1_price <= score)
+        {
+            augmenterMultiplicateur_ia1()
+            score -= multi_ia1_price;
+            multi_ia1_price *= 2;
+            document.getElementById("multipli_ia1").innerHTML = multi_ia1;
+            document.getElementById("multi_ia1_price").innerHTML = multi_ia1_price;
+            document.getElementById("clicks").innerHTML = score;
+        }
+        else
+        {
+            alert("Vous êtes pauvre");
+        }
+    }
+
+    function augmenterMultiplicateur_ia1()
+        {
+            multi_ia1 += 1;
+            document.getElementById("multipli_ia1").innerHTML = multi;
+        }
+    
+    //===== Illuminati's Support =====
+
+    function buy_multi_ia2(){
+        if(multi_ia2_price <= score)
+        {
+            augmenterMultiplicateur_ia2()
+            score -= multi_ia2_price;
+            multi_ia2_price *= 2;
+            document.getElementById("multipli_ia2").innerHTML = multi_ia2;
+            document.getElementById("multi_ia2_price").innerHTML = multi_ia2_price;
+            document.getElementById("clicks").innerHTML = score;
+        }
+        else
+        {
+            alert("Vous êtes pauvre");
+        }
+    }
+
+    function augmenterMultiplicateur_ia2()
+        {
+            multi_ia2 += 1;
+            document.getElementById("multipli_ia2").innerHTML = multi;
+        }  
+    
+// ======================================== Saving Game Data ==================================================
+    
+function restart_auto_click()
+{
+    document.getElementById("clicks").innerHTML = score;
+    setInterval(function auto_click_becodien()
+        {
+            taper_becodien()
+        },
+        1000);
+    
+    setInterval(function auto_click_junior()
+        {
+            taper_junior()
+        },
+        1000);
+
+    setInterval(function auto_click_chinese()
+        {
+            taper_chinese()
+        },
+        1000);
+    
+    setInterval(function auto_click_fullstack()
+        {
+            taper_fullstack()
+        },
+        1000);
+    
+    setInterval(function auto_click_hacker()
+        {
+            taper_hacker()
+        },
+        1000);
+    
+    setInterval(function auto_click_nasa()
+        {
+            taper_nasa()
+        },
+        1000);
+
+    setInterval(function auto_click_ia()
+        {
+            taper_ia()
+        },
+        1000);
+}
+    
+
+function clickCounter() 
+{
+    document.getElementById("clicks").innerHTML = score;
+    if(score == 0)
+    {
+        document.getElementById("clicks").innerHTML = score;
+        score = Number(localStorage.getItem("score2"));
+        
+        becodien = Number(localStorage.getItem("becodien"));
+        junior = Number(localStorage.getItem("junior"));
+        chinese = Number(localStorage.getItem("chinese"));
+        fullstack = Number(localStorage.getItem("fullstack"));
+        hacker = Number(localStorage.getItem("hacker"));
+        nasa = Number(localStorage.getItem("nasa"));
+        ia = Number(localStorage.getItem("ia"));
+
+        becodien_click += Number(localStorage.getItem("becodien_click"));
+        junior_click += Number(localStorage.getItem("junior_click"));
+        chinese_click += Number(localStorage.getItem("chinese_click"));
+        fullstack_click += Number(localStorage.getItem("fullstack_click"));
+        hacker_click += Number(localStorage.getItem("hacker_click"));
+        nasa_click += Number(localStorage.getItem("nasa_click"));
+        ia_click += Number(localStorage.getItem("ia_click"));
+
+        multi = Number(localStorage.getItem("multi"));
+        multi_becodien1 = Number(localStorage.getItem("multi_becodien1"));
+        multi_becodien2 = Number(localStorage.getItem("multi_becodien2"));
+        multi_junior1 = Number(localStorage.getItem("multi_junior1"));
+        multi_junior2 = Number(localStorage.getItem("multi_junior2"));
+        multi_chinese1 = Number(localStorage.getItem("multi_chinese1"));
+        multi_chinese2 = Number(localStorage.getItem("multi_chinese2"));
+        multi_fullstack1 = Number(localStorage.getItem("multi_fullstack1"));
+
+        multi_price = Number(localStorage.getItem("multi_price"));
+        multi_becodien1_price = Number(localStorage.getItem("multi_becodien1_price"));
+        multi_becodien2_price = Number(localStorage.getItem("multi_becodien2_price"));
+        multi_junior1_price = Number(localStorage.getItem("multi_junior1_price"));
+        multi_junior2_price = Number(localStorage.getItem("multi_junior2_price"));
+        multi_chinese1_price = Number(localStorage.getItem("multi_chinese1_price"));
+        multi_chinese2_price = Number(localStorage.getItem("multi_chinese2_price"));
+        multi_fullstack1_price = Number(localStorage.getItem("multi_fullstack1_price"));
+
+        auto_click_price = Number(localStorage.getItem("auto_click_price"));
+        auto_becodien_price = Number(localStorage.getItem("auto_becodien_price"));
+        auto_junior_price = Number(localStorage.getItem("auto_junior_price"));
+        auto_chinese_price = Number(localStorage.getItem("auto_chinese_price"));
+        auto_fullstack_price = Number(localStorage.getItem("auto_fullstack_price"));
+        auto_hacker_price = Number(localStorage.getItem("auto_hacker_price"));
+        auto_nasa_price = Number(localStorage.getItem("auto_nasa_price"));
+        auto_ia_price = Number(localStorage.getItem("auto_ia_price"));
+    }
+    else
+    {
+        document.getElementById("clicks").innerHTML = score;
+        localStorage.setItem("score2", score);
+        localStorage.setItem("becodien", becodien);
+        localStorage.setItem("junior", junior);
+        localStorage.setItem("chinese", chinese);
+        localStorage.setItem("fullstack", fullstack);
+        localStorage.setItem("hacker", hacker);
+        localStorage.setItem("nasa", nasa);
+        localStorage.setItem("ia", ia);
+
+        localStorage.setItem("becodien_click", becodien_click);
+        localStorage.setItem("junior_click", junior_click);
+        localStorage.setItem("chinese_click", chinese_click);
+        localStorage.setItem("fullstack_click", fullstack_click);
+        localStorage.setItem("hacker_click", hacker_click);
+        localStorage.setItem("nasa_click", nasa_click);
+        localStorage.setItem("ia_click", ia_click);
+
+        localStorage.setItem("multi", multi);
+        localStorage.setItem("multi_becodien1", multi_becodien1);
+        localStorage.setItem("multi_becodien2", multi_becodien2);
+        localStorage.setItem("multi_junior1", multi_junior1);
+        localStorage.setItem("multi_junior2", multi_junior2);
+        localStorage.setItem("multi_chinese1", multi_chinese1);
+        localStorage.setItem("multi_chinese2", multi_chinese2);
+        localStorage.setItem("multi_fullstack1", multi_fullstack1);
+
+        localStorage.setItem("multi_price", multi_price);
+        localStorage.setItem("multi_becodien1_price", multi_becodien1_price);
+        localStorage.setItem("multi_becodien2_price", multi_becodien2_price);
+        localStorage.setItem("multi_junior1_price", multi_junior1_price);
+        localStorage.setItem("multi_junior2_price", multi_junior2_price);
+        localStorage.setItem("multi_chinese1_price", multi_chinese1_price);
+        localStorage.setItem("multi_chinese2_price", multi_chinese2_price);
+        localStorage.setItem("multi_fullstack1_price", multi_fullstack1_price);
+
+        localStorage.setItem("auto_click_price", auto_click_price);
+        localStorage.setItem("auto_becodien_price", auto_becodien_price);
+        localStorage.setItem("auto_junior_price", auto_junior_price);
+        localStorage.setItem("auto_chinese_price", auto_chinese_price);
+        localStorage.setItem("auto_fullstack_price", auto_fullstack_price);
+        localStorage.setItem("auto_hacker_price", auto_hacker_price);
+        localStorage.setItem("auto_nasa_price", auto_nasa_price);
+        localStorage.setItem("auto_ia_price", auto_ia_price);
+
+        console.log("Data saved")
+    }
+}
+
+function refresh_value()
+{
+    document.getElementById("clicks").innerHTML = score;
+
+    document.getElementById("multi_price").innerHTML = multi_price;
+    document.getElementById("multi_becodien1_price").innerHTML = multi_becodien1_price;
+    document.getElementById("multi_becodien2_price").innerHTML = multi_becodien2_price;
+    document.getElementById("multi_junior1_price").innerHTML = multi_junior1_price;
+    document.getElementById("multi_junior2_price").innerHTML = multi_junior2_price;
+    document.getElementById("multi_chinese1_price").innerHTML = multi_chinese1_price;
+    document.getElementById("multi_chinese2_price").innerHTML = multi_chinese2_price;
+    document.getElementById("multi_fullstack1_price").innerHTML = multi_fullstack1_price;
+    document.getElementById("multi_hacker1_price").innerHTML = multi_hacker1_price;
+    document.getElementById("multi_hacker2_price").innerHTML = multi_hacker2_price;
+    document.getElementById("multi_hacker3_price").innerHTML = multi_hacker3_price;
+    document.getElementById("multi_hacker4_price").innerHTML = multi_hacker4_price;
+    document.getElementById("multi_nasa1_price").innerHTML = multi_nasa1_price;
+    document.getElementById("multi_nasa2_price").innerHTML = multi_nasa2_price;
+    document.getElementById("multi_ia1_price").innerHTML = multi_ia1_price;
+    document.getElementById("multi_ia2_price").innerHTML = multi_ia2_price;
+
+    document.getElementById("auto_price").innerHTML = auto_click_price;
+    document.getElementById("auto_becodien_price").innerHTML = auto_becodien_price;
+    document.getElementById("auto_junior_price").innerHTML = auto_junior_price;
+    document.getElementById("auto_chinese_price").innerHTML = auto_chinese_price;
+    document.getElementById("auto_fullstack_price").innerHTML = auto_fullstack_price;
+    document.getElementById("auto_hacker_price").innerHTML = auto_hacker_price;
+    document.getElementById("auto_nasa_price").innerHTML = auto_nasa_price;
+    document.getElementById("auto_ia_price").innerHTML = auto_ia_price;
+
+    document.getElementById("becodien").innerHTML = becodien;
+    document.getElementById("multipli_becodien1").innerHTML = multi_becodien1;
+    document.getElementById("multipli_becodien2").innerHTML = multi_becodien2;
+    document.getElementById("junior").innerHTML = junior;
+    document.getElementById("chinese").innerHTML = chinese;
+    document.getElementById("fullstack").innerHTML = fullstack;
+    document.getElementById("hacker").innerHTML = hacker;
+    document.getElementById("nasa").innerHTML = nasa;
+    document.getElementById("ia").innerHTML = ia;
+}
+
+function auto_save()
+{
+    setInterval(function saveinterval()
+    {
+        clickCounter()
+    },
+    6000);
+}
+clickCounter();
+auto_save();
+restart_auto_click();
+refresh_value();
+
+    
+    function key_pressing()
+            {
+                taper()
+            };
+</script>

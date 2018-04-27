@@ -1,0 +1,108 @@
+body 
+{
+    background: #63c3d1;
+}
+.container
+{
+    margin-top: 50px;
+    text-align: center;
+}
+
+h1
+{
+    color: #16232e;
+
+}
+
+.affiche
+{
+    text-align: center;
+    line-height: 50px;
+    margin-left: 500px;
+}
+
+p
+{
+height: 50px;
+width: 200px;
+}
+
+.commands
+{
+    display: inline-block;
+    height: 500px;
+}
+
+.multiplicateur
+{
+    background: rgb(49, 49, 204);
+    height: 475px;
+    overflow: scroll;
+
+}
+.mult
+{
+    display: block;
+    margin-top: 5px;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+.boost
+{
+    display: block;
+    margin-top: 5px;
+    margin-left: 
+}
+
+.liststyle
+{
+    list-style: none;
+}
+
+.keyboard
+{
+    height: 500px;
+    max-width: 580px;
+    min-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template: 150px / auto auto auto;
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;  
+}
+
+.letter
+{
+    height: 45px;
+    height: 45px;
+    min-width: 7%;
+}
+
+#shift
+{
+    width: 15%;
+}
+
+.letter_ligne2
+{
+    margin-left: 10px;
+    margin-right: -10px;
+}
+
+.letter_ligne3
+{
+    margin-left: 20px;
+    margin-right: -20px;
+}
+
+.auto-clicker
+{
+    background: rgb(49, 49, 204);
+    height: 475px;
+}
